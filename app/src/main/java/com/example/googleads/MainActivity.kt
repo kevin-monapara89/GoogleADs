@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         fullad = findViewById(R.id.fullad)
 
+        //Banner Ad
+
         var adView = AdView(this)
         adView.setAdSize (AdSize.FULL_BANNER)
         adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
@@ -31,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
-        //Full ad
+        //Interstitial ads
+
         var adRequest1 = AdRequest.Builder().build()
 
         InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
