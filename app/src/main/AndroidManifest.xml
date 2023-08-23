@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" tools:node="remove"/>
 
     <application
         android:allowBackup="true"
@@ -27,6 +28,13 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <meta-data android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="207633012" />
+
+        <meta-data android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" />
+
     </application>
 
 </manifest>

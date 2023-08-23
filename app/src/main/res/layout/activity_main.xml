@@ -23,7 +23,41 @@
         android:id="@+id/fullad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="10dp"
         android:text="Full Ad"/>
+
+    <com.startapp.sdk.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <com.startapp.sdk.ads.banner.Mrec
+        android:id="@+id/startAppMrec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <com.startapp.sdk.ads.banner.Cover
+        android:id="@+id/startAppCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+<!--    <Button-->
+<!--        android:id="@+id/startioad"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:text="Start.io Splash Ad"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/returnad"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:text="Return Ad"/>-->
+
 
 </LinearLayout>

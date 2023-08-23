@@ -46,4 +46,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("com.google.android.gms:play-services-ads:22.2.0")
+
+    implementation("com.startapp:inapp-sdk:4.11.+")
 }

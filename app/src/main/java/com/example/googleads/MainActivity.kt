@@ -1,17 +1,20 @@
 package com.example.googleads
 
 import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.startapp.sdk.adsbase.AutoInterstitialPreferences
+import com.startapp.sdk.adsbase.StartAppAd
+import com.startapp.sdk.adsbase.StartAppSDK
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         fullad = findViewById(R.id.fullad)
+//        var startio = findViewById<Button>(R.id.startioad)
+//        var returnad = findViewById<Button>(R.id.returnad)
 
         //Banner Ad
 
@@ -56,5 +61,20 @@ class MainActivity : AppCompatActivity() {
                 Log.d("TAG", "The interstitial ad wasn't ready yet.")
             }
         }
+
+        // start.io Ads
+
+        //splash Ad
+            StartAppAd.disableSplash()
+
+
+        //return Ad
+        StartAppSDK.init(this, "StartApp App ID", false)
+
+            StartAppAd.setAutoInterstitialPreferences(
+                AutoInterstitialPreferences()
+                    .setSecondsBetweenAds(60)
+            )
+
     }
 }
